@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @keyframes move {
+            0% {
+                transform: translate(0);
+            }
+
+            25% {
+                transform: translate(500px);
+            }
+
+            50% {
+                transform: translate(500px,500px)
+            }
+
+            75% {
+                transform: translate(0px,500px)
+            }
+
+            100% {
+                transform: translate(0px)
+            }
+
+        }
+
+        div.box {
+            height: 566px;
+            width: 566px;
+            margin: 10px auto;
+        }
+        div.move{
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            background-color: pink;
+            animation: move 5s infinite
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="move"></div>
+    </div>
+</body>
+</html>

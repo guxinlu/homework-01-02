@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hm1 {
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+            margin: 0 auto 10px;
+        }
+
+        .hm2 {
+            position: relative;
+            height: 500px;
+            margin-bottom: 10px;
+        }
+
+        .hm2 div:first-child {
+            position: absolute;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            margin-left: -250px;
+            background-color: skyblue;
+        }
+
+        .hm3 {
+            position: relative;
+            height: 500px;
+        }
+
+        .hm3 div:first-child {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0);
+            }
+
+            25% {
+                transform: translate(500px);
+            }
+
+            50% {
+                transform: translate(500px,500px)
+            }
+
+            75% {
+                transform: translate(0px,500px)
+            }
+
+            100% {
+                transform: translate(0px)
+            }
+
+        }
+
+        div.box {
+            height: 500px;
+            width: 500px;
+            margin: 10px auto;
+        }
+        div.move{
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            background-color: pink;
+            animation: move 5s infinite
+        }
+    </style>
+</head>
+<body>
+    <div class="hm1"></div>
+    <div class="hm2">
+        <div></div>
+    </div>
+    <div class="hm3">
+        <div></div>
+    </div>
+</body>
+</html>
